@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     private void openButtonListener() {
         openButton = (Button) findViewById(R.id.open);
         final String ipAddress = ip.getText().toString();
-
+        // TODO: 31/12/15 using the ip address that is typed to text field
         openButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
     private void closeButtonListener() {
         closeButton = (Button) findViewById(R.id.close);
         final String ipAddress = ip.getText().toString();
-
+        // TODO: 31/12/15 using the ip address that is typed to text field
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
