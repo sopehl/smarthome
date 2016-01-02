@@ -2,7 +2,7 @@
 
 -	Firstly, Smarthome application thesis is prepared for Fatih Sultan Mehmet University-Computer Engineering<?bitirme tezi?>. 
 
--	This thesis is prepared for Smarthome application that is created both server-side and client-side. In this thesis documantation, there are two statements which are explained clearly throughout thesis and below:
+-	This thesis document is typed for Smarthome application that is created both server-side and client-side. In this thesis documantation, there are two statements which are explained clearly throughout thesis and below:
 	-	User
 		-	has an android application written in java programming language
 	-	Server
