@@ -198,7 +198,7 @@ urlpatterns = [
 
 >	Yes, we can get the temperature information about smarthome. Send the `/temp` request.
 
-#### 3.1 Project vs App
+#### 3.1 Project vs App[Django]
 
 -	What’s the difference between a project and an app? An app is a Web application that does something – e.g., a Weblog system, a database of public records or a simple poll app. A project is a collection of configuration and apps for a particular website. A project can contain multiple apps. An app can be in multiple projects.
 
@@ -206,6 +206,8 @@ urlpatterns = [
 -	çünkü ileride buralarda web socket vs gibi kullanımlar devreye giricek. o yüzden daha ayrıntılı bir django anlatımı gerekicek. ORM tech gerek yok veri tabanı işlemleri devreye girerse o zaman veri tabanı işlemlerini anlatırım ama şuan görünürde ORM yok. İleride socket ile ilgili kısımlar devreye alınıcak o zaman ayrıntılı bir django ve jodd anlatımı gerekmektedir. Socket nedir onun üzerine çalışılacak.
 
 -	Gradle ve jodd hakkında geniş bir araştırma yapacağım. Şimdilik sadece işime yarayan kısımları kullandım.
+
+[Django](https://docs.djangoproject.com/en/1.9/intro/tutorial01/)
 
 
 
