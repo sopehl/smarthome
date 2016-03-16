@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -30,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,13 +68,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void openButtonListener() {
         openButton = (Button) findViewById(R.id.open);
-        final String ipAddress = ip.getText().toString();
         // TODO: 31/12/15 using the ip address that is typed to text field
         openButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 HttpRequest postRequest = HttpRequest
-                        .post("http://172.16.20.76:8000/temp")
+                        .post("http://192.168.1.4:8000/temp")
                         .form("on", true);
                 logger.info("sending the post");
                 HttpResponse postResponse = postRequest.send();
@@ -91,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 HttpRequest postRequest = HttpRequest
-                        .post("http://172.16.20.76:8000/temp")
+                        .post("http://192.168.1.4:8000/temp")
                         .form("on", false);
                 logger.info("sending the post");
                 HttpResponse postResponse = postRequest.send();
