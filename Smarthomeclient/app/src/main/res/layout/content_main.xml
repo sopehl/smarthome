@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,7 +13,7 @@
     tools:showIn="@layout/activity_main">
 
 
-
+<!--
     <Button
         android:id="@+id/open"
         android:layout_width="wrap_content"
@@ -30,17 +30,66 @@
         android:text="@string/close_led"
         android:layout_alignTop="@+id/open"
         android:layout_centerHorizontal="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
+-->
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/close"
-        android:layout_alignEnd="@+id/close"
-        android:inputType="text" />
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="60dp"
+        >
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/editText"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:hint="@string/ip_hint"
+            android:maxLength="15">
+        </EditText>
+        <Button
+            android:id="@+id/ip_address"
+            android:text="@string/set_ip"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/editText"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:onClick="setIPAddress"
+            >
+        </Button>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/smartButtonsLayout"
+            android:orientation="vertical"
+            android:layout_below="@id/editText"
+            >
+
+            <Button
+                android:id="@+id/camera"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="openCameraWebViewActivity"
+                android:layout_marginRight="80dp"
+                android:text="@string/open_camera"
+                android:drawableLeft="@drawable/camera"/>
+            <Button
+                android:id="@+id/temperature"
+                android:layout_width="fill_parent"
+                android:layout_marginRight="80dp"
+                android:layout_height="wrap_content"
+                android:onClick="openTemperatureActivity"
+                android:text="@string/open_temperature"
+                android:drawableLeft="@drawable/temp" />
+
+            <Button
+                android:id="@+id/wet"
+                android:layout_width="fill_parent"
+                android:layout_marginRight="80dp"
+                android:layout_height="wrap_content"
+                android:onClick="openWetActivity"
+                android:text="@string/open_wet"
+                android:drawableLeft="@drawable/wet"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
 
 
-</RelativeLayout>

@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         ip = (EditText) findViewById(R.id.editText);
-        openButtonListener();
-        closeButtonListener();
+        //openButtonListener();
+        //closeButtonListener();
     }
 
     @Override
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
+/*
     private void openButtonListener() {
         openButton = (Button) findViewById(R.id.open);
         // TODO: 31/12/15 using the ip address that is typed to text field
@@ -98,4 +98,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    */
 }
