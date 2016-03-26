@@ -12,38 +12,20 @@
     tools:context="com.smarthomeclient.MainActivity"
     tools:showIn="@layout/activity_main">
 
-
-<!--
-    <Button
-        android:id="@+id/open"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/open_led"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="98dp" />
-
-    <Button
-        android:id="@+id/close"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/close_led"
-        android:layout_alignTop="@+id/open"
-        android:layout_centerHorizontal="true" />
--->
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_marginLeft="60dp"
-        >
+        android:layout_marginLeft="60dp">
         <EditText
             android:layout_marginTop="10dp"
             android:id="@+id/editText"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:hint="@string/ip_hint"
-            android:maxLength="15">
+            android:maxLength="15"
+            android:inputType="number|numberDecimal"
+            android:digits="0123456789.">
         </EditText>
         <Button
             android:id="@+id/ip_address"
@@ -67,10 +49,10 @@
                 android:id="@+id/camera"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:onClick="openCameraWebViewActivity"
                 android:layout_marginRight="80dp"
                 android:text="@string/open_camera"
-                android:drawableLeft="@drawable/camera"/>
+                android:drawableLeft="@drawable/camera"
+                android:onClick="openCameraWebViewActivity"/>
             <Button
                 android:id="@+id/temperature"
                 android:layout_width="fill_parent"
