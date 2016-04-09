@@ -33,7 +33,7 @@ public class CameraWebViewActivity extends AppCompatActivity {
                 "\t<title></title>\n" +
                 "</head>\n" +
                 "<body>\n" +
-                "<img src=\"http://192.168.1.5:8081/\">\n" +
+                "<img src=\"http://"+ipAddress+":8081/\">\n" +
                 "</body>\n" +
                 "</html>";
         String mime = "text/html";
