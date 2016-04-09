@@ -1,11 +1,13 @@
 <resources>
     <string name="hello_message">Hello Activity</string>
+    <string name="turn_right">Turn Right</string>
+    <string name="turn_left">Turn Left</string>
     <string name="app_name">Really SH</string>
     <string name="action_settings">Settings</string>
     <string name="open_led">Open Led</string>
     <string name="close_led">Close Led</string>
     <string name="set_ip">Set IP</string>
-    <string name="ip_hint">192.168.1.7</string>
+    <string name="ip_hint">192.168.1.5</string>
     <string name="open_camera">Camera</string>
     <string name="open_temperature">Temperature</string>
     <string name="open_wet">Wet</string>

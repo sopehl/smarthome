@@ -71,35 +71,38 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void setIPAddressListener(View view) {
-                ipEditText = (EditText) findViewById(R.id.editText);
-                ipAddress = ipEditText.getText().toString();
-                logger.info("Entered IP address: " + ipAddress);
-                boolean isValidIPAddress = ipAddressValidator.validate(ipAddress);
-                if (isValidIPAddress) {
-                    //TODO: assign the ip address to global variable for all activities
-                    logger.info("IP address is valid");
-                } else {
-                    logger.log(Level.INFO, "IP address is invalid");
-                }
-                Toast ipToast = Toast.makeText(getApplicationContext(), "Entered IP Address: ".concat(ipAddress + " " + String.valueOf(isValidIPAddress)), Toast.LENGTH_SHORT);
-                ipToast.setDuration(Toast.LENGTH_SHORT);
-                ipToast.show();
+    String validIpAddress = null;
 
+    public void setIPAddressListener(View view) {
+        ipEditText = (EditText) findViewById(R.id.editText);
+        ipAddress = ipEditText.getText().toString();
+        logger.info("Entered IP address: " + ipAddress);
+        boolean isValidIPAddress = ipAddressValidator.validate(ipAddress);
+        if (isValidIPAddress) {
+            //TODO: assign the ip address to global variable for all activities
+            validIpAddress = ipAddress;
+            logger.info("IP address is valid: " + validIpAddress);
+        } else if (ipAddress.equals("")) {
+            validIpAddress = "192.168.1.5";
+            logger.info("Default valid ip address: " + validIpAddress);
+        } else {
+            validIpAddress = null;
+            logger.log(Level.INFO, "IP address is invalid");
+        }
 
     }
 
     public void openCameraWebViewActivity(View view) {
         Intent intent = new Intent(this, CameraWebViewActivity.class);
-        ipEditText = (EditText) findViewById(R.id.editText);
-        logger.info("asd: " + ipAddress);
-        if (ipAddress != null && ipAddressValidator.validate(ipAddress)) {
-
-            intent.putExtra(IP_ADDRESS, ipAddress);
-            logger.info("Wanted to put ip address: " + ipAddress);
+        logger.info("ip_address: " + validIpAddress);
+        if (validIpAddress != null) {
+            intent.putExtra(IP_ADDRESS, validIpAddress);
+            logger.info("Wanted to put ip address: " + validIpAddress);
             startActivity(intent);
         } else {
-            logger.info("Null or invalid ip address");
+            Toast ipToast = Toast.makeText(getApplicationContext(), "Set ip address firstly", Toast.LENGTH_SHORT);
+            ipToast.setDuration(Toast.LENGTH_SHORT);
+            ipToast.show();
         }
     }
 }

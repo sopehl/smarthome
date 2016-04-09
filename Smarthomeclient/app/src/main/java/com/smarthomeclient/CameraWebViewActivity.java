@@ -7,6 +7,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.webkit.WebView;
 
 import java.util.logging.Logger;
 
@@ -25,14 +26,22 @@ public class CameraWebViewActivity extends AppCompatActivity {
         String ipAddress = intent.getStringExtra(MainActivity.IP_ADDRESS);
         logger.info("Sent ip address from MainActivity: " + ipAddress);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        WebView webView = (WebView) findViewById(R.id.camera_view);
+        String html = "<!DOCTYPE html>\n" +
+                "<html>\n" +
+                "<head>\n" +
+                "\t<title></title>\n" +
+                "</head>\n" +
+                "<body>\n" +
+                "<img src=\"http://192.168.1.5:8081/\">\n" +
+                "</body>\n" +
+                "</html>";
+        String mime = "text/html";
+        String encoding = "utf-8";
+
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.loadDataWithBaseURL(null, html, mime, encoding, null);
+
     }
 
 }
