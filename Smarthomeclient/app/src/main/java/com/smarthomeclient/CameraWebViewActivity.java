@@ -44,4 +44,12 @@ public class CameraWebViewActivity extends AppCompatActivity {
 
     }
 
+    public void turnLeft(View view) {
+        //TODO: send request "/left"
+    }
+
+    public void turnRight(View view) {
+        //TODO: send request "/right"
+    }
+
 }

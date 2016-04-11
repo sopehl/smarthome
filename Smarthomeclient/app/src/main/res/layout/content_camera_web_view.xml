@@ -28,6 +28,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/turn_left"
                 android:textAllCaps="false"
+                android:onClick="turnLeft"
                 />
 
             <Button
@@ -37,6 +38,7 @@
                 android:text="@string/turn_right"
                 android:layout_toRightOf="@id/turn_left"
                 android:textAllCaps="false"
+                android:onClick="turnRight"
                 />
 
 
