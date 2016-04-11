@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             validIpAddress = ipAddress;
             logger.info("IP address is valid: " + validIpAddress);
         } else if (ipAddress.equals("")) {
-            validIpAddress = "192.168.1.2";
+            validIpAddress = "172.16.20.233";
             logger.info("Default valid ip address: " + validIpAddress);
         } else {
             validIpAddress = null;

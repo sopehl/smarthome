@@ -13,31 +13,39 @@
     tools:showIn="@layout/activity_camera_web_view">
 
     <RelativeLayout
+        android:id="@+id/camera_relative"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <RelativeLayout
+            android:id="@+id/inner_relative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <Button
+                android:id="@+id/turn_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/turn_left"
+                android:textAllCaps="false"
+                />
+
+            <Button
+                android:id="@+id/right_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/turn_right"
+                android:layout_toRightOf="@id/turn_left"
+                android:textAllCaps="false"
+                />
+
+
+        </RelativeLayout>
         <WebView
             android:id="@+id/camera_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:minHeight="150dp">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inner_relative">
         </WebView>
-
-        <Button
-            android:id="@+id/right_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/turn_right"
-            android:layout_above="@id/camera_view"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/turn_left"
-            android:layout_above="@id/camera_view"
-            android:layout_alignRight="@id/right_button"/>
-
     </RelativeLayout>
-
-
-
 </LinearLayout>
