@@ -8,3 +8,7 @@ class CameraControlView(APIView):
         if direction == 'left':
             # TODO turn left with GPIO program
             return Response(direction)
+        elif direction == 'right':
+            return Response(direction)
+        else:
+            return Response("Something is wrong")
