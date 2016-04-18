@@ -23,3 +23,17 @@ class LEDView(APIView):
             print on
             json = {'info': 'okay'}
             return Response(json)
+
+
+class CameraControlView(APIView):
+
+    def get(self, direction):
+
+        if direction == 'left':
+            # TODO turn left with GPIO program
+            pass
+        elif direction == 'right':
+            # TODO turn right with GPIO program
+            pass
+        else:
+            pass
