@@ -17,6 +17,6 @@ Including another URLconf
 from django.conf.urls import url, include
 
 urlpatterns = [
-    url(r'^temp', include('smarthome.urls')),
+    url(r'^sh/', include('smarthome.urls')),
     url(r'^api', include('rest_framework.urls', namespace='rest_framework')),
 ]
