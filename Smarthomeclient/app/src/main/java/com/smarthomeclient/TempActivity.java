@@ -51,7 +51,7 @@ public class TempActivity extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            textView.setText(temp);
+                            textView.setText(temp + " \u2103");
                         }
                     });
 
