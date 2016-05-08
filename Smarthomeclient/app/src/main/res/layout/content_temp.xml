@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.smarthomeclient.TempActivity"
+    tools:showIn="@layout/activity_temp">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/temp_act"
+            android:layout_below="@+id/temp_refresh"/>
+
+        <Button
+            android:id="@+id/temp_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="refreshTemperature"
+            android:layout_centerHorizontal="true"
+            android:text="@string/refresh_temperature"
+            android:layout_below="@+id/temp_text"/>
+
+        <TextView
+            android:id="@+id/temp_text"
+            android:layout_centerHorizontal="true"
+            android:textSize="32sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

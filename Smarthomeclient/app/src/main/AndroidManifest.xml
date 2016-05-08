@@ -23,8 +23,17 @@
         <activity
             android:name=".CameraWebViewActivity"
             android:label="@string/title_activity_camera_web_view"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName="com.smarthomeclient.MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.smarthomeclient.MainActivity" />
+        </activity>
+        <activity
+            android:name=".TempActivity"
+            android:label="@string/title_activity_temp"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.smarthomeclient.MainActivity" />
