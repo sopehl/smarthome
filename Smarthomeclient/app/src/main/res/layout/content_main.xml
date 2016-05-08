@@ -67,7 +67,7 @@
                 android:layout_width="fill_parent"
                 android:layout_marginRight="80dp"
                 android:layout_height="wrap_content"
-                android:onClick="openWetActivity"
+                android:onClick="openHumidityActivity"
                 android:text="@string/open_wet"
                 android:drawableLeft="@drawable/wet"/>
         </LinearLayout>

@@ -120,4 +120,18 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+    public void openHumidityActivity(View view) {
+        Intent intent = new Intent(this, Humidity.class);
+        logger.info("intent to open HumidityActivity");
+        if (validIpAddress != null) {
+            intent.putExtra(IP_ADDRESS, validIpAddress);
+            logger.info("valid ip address for HumidityActivity" + validIpAddress);
+            startActivity(intent);
+        } else {
+            Toast ipToast = Toast.makeText(getApplicationContext(), "Set ip address firstly", Toast.LENGTH_SHORT);
+            ipToast.setDuration(Toast.LENGTH_SHORT);
+            ipToast.show();
+        }
+    }
 }
