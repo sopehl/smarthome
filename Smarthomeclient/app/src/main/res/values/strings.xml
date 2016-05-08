@@ -13,6 +13,7 @@
     <string name="open_wet">Wet</string>
     <string name="title_activity_camera_web_view">CameraWebViewActivity</string>
     <string name="title_activity_temp">TempActivity</string>
-    <string name="refresh_temperature" >Refresh</string>
-    <string name="temp_example" >23</string>
+    <string name="refresh_temperature">Refresh</string>
+    <string name="temp_example">23</string>
+    <string name="title_activity_humidity">Humidity</string>
 </resources>
