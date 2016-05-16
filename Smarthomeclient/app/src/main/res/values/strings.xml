@@ -10,7 +10,7 @@
     <string name="ip_hint">192.168.1.5</string>
     <string name="open_camera">Camera</string>
     <string name="open_temperature">Temperature</string>
-    <string name="open_wet">Wet</string>
+    <string name="open_wet">Humidity</string>
     <string name="title_activity_camera_web_view">CameraWebViewActivity</string>
     <string name="title_activity_temp">TempActivity</string>
     <string name="refresh_temperature">Refresh</string>

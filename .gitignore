@@ -109,3 +109,7 @@ docs/_build/
 # PyBuilder
 target/
 
+#Database
+smart.db
+smart.db-journal
+

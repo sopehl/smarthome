@@ -52,6 +52,7 @@
                 android:layout_marginRight="80dp"
                 android:text="@string/open_camera"
                 android:drawableLeft="@drawable/camera"
+                android:textAllCaps="false"
                 android:onClick="openCameraWebViewActivity"/>
             <Button
                 android:id="@+id/temperature"
@@ -59,6 +60,7 @@
                 android:layout_marginRight="80dp"
                 android:layout_height="wrap_content"
                 android:onClick="openTemperatureActivity"
+                android:textAllCaps="false"
                 android:text="@string/open_temperature"
                 android:drawableLeft="@drawable/temp" />
 
@@ -67,6 +69,7 @@
                 android:layout_width="fill_parent"
                 android:layout_marginRight="80dp"
                 android:layout_height="wrap_content"
+                android:textAllCaps="false"
                 android:onClick="openHumidityActivity"
                 android:text="@string/open_wet"
                 android:drawableLeft="@drawable/wet"/>
